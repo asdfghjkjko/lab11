@@ -86,9 +86,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,"書名請勿留空",Toast.LENGTH_SHORT).show();
             else{
                 try {
-                    dbrw.execSQL("DELETE FROM myTable WHERE book LIKE '" +ed_price.getText().toString()+"'");
-                    Toast.makeText(MainActivity.this,"刪除書名"
-                            +ed_book.getText().toString(),Toast.LENGTH_SHORT).show();
+                    dbrw.execSQL("DELETE FROM myTable WHERE book LIKE '" +ed_book.getText().toString()+"'");
+                    Toast.makeText(MainActivity.this,"刪除書名" +
+                            ed_book.getText().toString(),Toast.LENGTH_SHORT).show();
                     ed_book.setText("");
                     ed_price.setText("");
                 }catch (Exception e){
